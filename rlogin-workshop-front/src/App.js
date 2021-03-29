@@ -77,7 +77,6 @@ function App() {
       <div>
         <RLoginButton onClick={connect}>Connect wallet</RLoginButton>
         <p>wallet address: {account}</p>
-        <p>did: {account && did}</p>
       </div>
       <hr />
       <h2>Web3 interaction</h2>
