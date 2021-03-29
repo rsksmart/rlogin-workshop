@@ -5,7 +5,7 @@
     rLogin workshop
 </p>
 
-Slides: TBD
+Slides: https://hackmd.io/@ilanolkies/rlogin-workshop
 
 This project has:
 - A front-end using [`@rsksmart/rLogin`](https://github.com/rsksmart/rLogin) pop-up
