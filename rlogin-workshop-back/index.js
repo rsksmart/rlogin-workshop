@@ -21,7 +21,7 @@ function signupBusinessLogic(payload) {
   return true
 }
 
-const authMiddleware = setupApp({ challengeSecret, serviceUrl, serviceDid, serviceSigner,
+const expressDIDAuthMiddleware = setupApp({ challengeSecret, serviceUrl, serviceDid, serviceSigner,
   requiredCredentials: ['Email'],
   requiredClaims: [],
   signupBusinessLogic
@@ -32,7 +32,7 @@ app.get('/not-protected', function (req, res) {
   res.send('This endpoint is not authenticating')
 })
 
-app.get('/protected', authMiddleware, function (req, res) {
+app.get('/protected', expressDIDAuthMiddleware, function (req, res) {
   console.log(`Protected triggered! (${req.user.did})`)
   res.send('This endpoint is authenticating')
 })
